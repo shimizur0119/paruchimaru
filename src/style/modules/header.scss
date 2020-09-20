@@ -1,0 +1,29 @@
+.header {
+  background-color: $primary;
+  &__inner {
+    max-width: 1200px;
+    padding: 20px 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-title {
+    font-family: $f_2;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+  &-nav {
+    ul {
+      display: flex;
+      li {
+        font-size: 20px;
+        font-family: $f_2;
+        letter-spacing: 0em;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

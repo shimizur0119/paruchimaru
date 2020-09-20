@@ -1,0 +1,11 @@
+@import "./base/base.scss";
+
+body {
+  color: $black;
+  font-family: $base_font;
+}
+
+@import "./modules/header.scss";
+@import "./modules/main.scss";
+@import "./modules/home.scss";
+@import "./modules/footer.scss";

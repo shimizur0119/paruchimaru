@@ -1,0 +1,57 @@
+.home {
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  .input1 {
+    flex-basis: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    &-label {
+      font-size: 20px;
+      flex-basis: 100%;
+      padding: 10px 0px;
+    }
+  }
+  .display {
+    &-aria {
+      width: 100%;
+      margin: 0px 20px;
+      padding: 20px;
+      &__empty {
+        padding: 20px;
+        background-color: gray;
+      }
+    }
+    &-items {
+      padding: 20px;
+      background-color: $primary;
+      &__btn {
+        margin-top: 40px;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: teal;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 0.5em;
+      }
+    }
+    &-item {
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__btn {
+        padding: 10px;
+        background-color: $secondary;
+      }
+    }
+  }
+}
