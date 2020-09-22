@@ -5,13 +5,15 @@ const TopHero = () => {
     <>
       <div className="top-hero">
         <section>
-          <h1>
-            <span>PARUCHIMARU</span>
-            へようこそ
-          </h1>
-          <p>
-            PARUCHIMARUとは、PARUCHIMARUによるPARUCHIMARUのためのWebサイトです。
-          </p>
+          <h1>PARUCHIMARU</h1>
+          <div>
+            <p>
+              PARUCHIMARUとは、PARUCHIMARUによるPARUCHIMARUのためのWebサイトです。
+            </p>
+            <p>
+              ひらがなで言うと、はるちまるとは、ぱるちまるによるぱるちまるのためのWebサイトです。
+            </p>
+          </div>
         </section>
       </div>
     </>
