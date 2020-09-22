@@ -1,20 +1,43 @@
 .home {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
   &-content {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
+    &__wrap {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
   }
-  .input1 {
+  %_input {
     flex-basis: 100%;
     background-color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    border: solid 5px $black;
+  }
+  %-label {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: $primary;
+  }
+  .input1 {
+    @extend %_input;
     &-label {
-      font-size: 20px;
-      flex-basis: 100%;
-      padding: 10px 0px;
+      @extend %-label;
+    }
+  }
+  .input2 {
+    @extend %_input;
+    &-label {
+      @extend %-label;
     }
   }
   .display {
@@ -44,6 +67,8 @@
       }
     }
     &-item {
+      font-size: 24px;
+      letter-spacing: 0.3em;
       padding: 10px 0px;
       display: flex;
       align-items: center;

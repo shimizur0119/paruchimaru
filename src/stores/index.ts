@@ -14,6 +14,6 @@ const reducer = combineReducers({
   home: homeReducer,
 })
 
-const store = configureStore({ reducer, middleware: middlewares })
+const createStore = () => configureStore({ reducer, middleware: middlewares })
 
-export default store
+export default createStore

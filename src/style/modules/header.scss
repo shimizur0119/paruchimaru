@@ -12,6 +12,16 @@
     font-family: $f_2;
     font-size: 40px;
     letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      background-image: url("../images/barn.svg");
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
   }
   &-nav {
     ul {
@@ -22,6 +32,10 @@
         letter-spacing: 0em;
         &:not(:last-child) {
           margin-right: 20px;
+        }
+        span {
+          margin-left: 10px;
+          font-size: 10px;
         }
       }
     }

@@ -5,12 +5,18 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__inner">
-          <div className="header-title">PARUCHIMARU</div>
+          <h1 className="header-title">PARUCHIMARU</h1>
           <nav className="header-nav">
             <ul>
-              <li>About</li>
-              <li>Sign up</li>
-              <li>Login</li>
+              <li>What's PARUCHIMARU ?</li>
+              <li>
+                Sign up
+                <span>to PARUCHIMARU</span>
+              </li>
+              <li>
+                Login
+                <span>to PARUCHIMARU</span>
+              </li>
             </ul>
           </nav>
         </div>
