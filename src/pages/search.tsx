@@ -4,17 +4,17 @@ import "../style/style.scss"
 import Header from "../components/organisms/Header"
 import Footer from "../components/organisms/Footer"
 import Main from "../components/organisms/main"
-import Mypage from "../components/organisms/Mypage"
+import Search from "../components/organisms/Search"
 
-const MypagePage = () => (
+const SearchPage = () => (
   <>
     <Head />
     <Header login={false} />
     <Main>
-      <Mypage />
+      <Search />
     </Main>
     <Footer />
   </>
 )
 
-export default MypagePage
+export default SearchPage

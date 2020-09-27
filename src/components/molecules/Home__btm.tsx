@@ -5,8 +5,8 @@ const Home__btm = () => {
   return (
     <>
       <div className="home__btm">
-        <Link to="/mypage" className="home__btm--login-btn">
-          <span>ログイン</span>
+        <Link to="/login" className="home__btm--login-btn">
+          <span>ログインする</span>
         </Link>
         <Link to="/search" className="home__btm--search-btn">
           <span>タイトルを調べる</span>

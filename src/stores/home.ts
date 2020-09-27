@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios, { AxiosRequestConfig } from "axios"
-import { db } from "../../firebase"
 
 const initialState = {
   data: [],
@@ -42,62 +41,62 @@ export const fetch1 = createAsyncThunk<any, string>(
   }
 )
 
-export const getDbData = createAsyncThunk<any>("home/getDbData", async () => {
-  let dbData = []
-  await db
-    .collection("data1")
-    .get()
-    .then(query => {
-      query.forEach(doc => {
-        const data = { ...doc.data(), id: doc.id }
-        dbData.push(data)
-      })
-    })
-  return dbData
-})
+// export const getDbData = createAsyncThunk<any>("home/getDbData", async () => {
+//   let dbData = []
+//   await db
+//     .collection("data1")
+//     .get()
+//     .then(query => {
+//       query.forEach(doc => {
+//         const data = { ...doc.data(), id: doc.id }
+//         dbData.push(data)
+//       })
+//     })
+//   return dbData
+// })
 
-export const addDbData = createAsyncThunk<any, Array<string>>(
-  "home/addDbData",
-  async arr => {
-    const addData = arr.map(e => {
-      return {
-        value: e,
-      }
-    })
-    addData.forEach(async e => {
-      await db.collection("data1").add(e)
-    })
-    let dbData = []
-    await db
-      .collection("data1")
-      .get()
-      .then(q => {
-        q.forEach(doc => {
-          const data = { ...doc.data(), id: doc.id }
-          dbData.push(data)
-        })
-      })
-    return dbData
-  }
-)
+// export const addDbData = createAsyncThunk<any, Array<string>>(
+//   "home/addDbData",
+//   async arr => {
+//     const addData = arr.map(e => {
+//       return {
+//         value: e,
+//       }
+//     })
+//     addData.forEach(async e => {
+//       await db.collection("data1").add(e)
+//     })
+//     let dbData = []
+//     await db
+//       .collection("data1")
+//       .get()
+//       .then(q => {
+//         q.forEach(doc => {
+//           const data = { ...doc.data(), id: doc.id }
+//           dbData.push(data)
+//         })
+//       })
+//     return dbData
+//   }
+// )
 
-export const deleteDbData = createAsyncThunk<any, string>(
-  "home/deleteDbData",
-  async id => {
-    await db.collection("data1").doc(id).delete()
-    let dbData = []
-    await db
-      .collection("data1")
-      .get()
-      .then(q => {
-        q.forEach(doc => {
-          const data = { ...doc.data(), id: doc.id }
-          dbData.push(data)
-        })
-      })
-    return dbData
-  }
-)
+// export const deleteDbData = createAsyncThunk<any, string>(
+//   "home/deleteDbData",
+//   async id => {
+//     await db.collection("data1").doc(id).delete()
+//     let dbData = []
+//     await db
+//       .collection("data1")
+//       .get()
+//       .then(q => {
+//         q.forEach(doc => {
+//           const data = { ...doc.data(), id: doc.id }
+//           dbData.push(data)
+//         })
+//       })
+//     return dbData
+//   }
+// )
 
 // Sliceを生成する
 const slice = createSlice({
@@ -121,18 +120,18 @@ const slice = createSlice({
       const [resultData, needDatas] = action.payload
       return { ...state, fetchData: resultData, fetchNeedDatas: needDatas }
     })
-    builder.addCase(getDbData.fulfilled, (state, action) => {
-      const resultData = action.payload
-      return { ...state, dbData: resultData }
-    })
-    builder.addCase(addDbData.fulfilled, (state, action) => {
-      const resultData = action.payload
-      return { ...state, dbData: resultData }
-    })
-    builder.addCase(deleteDbData.fulfilled, (state, action) => {
-      const resultData = action.payload
-      return { ...state, dbData: resultData }
-    })
+    // builder.addCase(getDbData.fulfilled, (state, action) => {
+    //   const resultData = action.payload
+    //   return { ...state, dbData: resultData }
+    // })
+    // builder.addCase(addDbData.fulfilled, (state, action) => {
+    //   const resultData = action.payload
+    //   return { ...state, dbData: resultData }
+    // })
+    // builder.addCase(deleteDbData.fulfilled, (state, action) => {
+    //   const resultData = action.payload
+    //   return { ...state, dbData: resultData }
+    // })
   },
 })
 

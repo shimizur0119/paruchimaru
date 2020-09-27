@@ -4,17 +4,17 @@ import "../style/style.scss"
 import Header from "../components/organisms/Header"
 import Footer from "../components/organisms/Footer"
 import Main from "../components/organisms/main"
-import Mypage from "../components/organisms/Mypage"
+import Login from "../components/organisms/Login"
 
-const MypagePage = () => (
+const LoginPage = () => (
   <>
     <Head />
     <Header login={false} />
     <Main>
-      <Mypage />
+      <Login />
     </Main>
     <Footer />
   </>
 )
 
-export default MypagePage
+export default LoginPage

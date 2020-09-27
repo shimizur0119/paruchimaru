@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   background: $black;
   &__inner {
     height: 100px;
