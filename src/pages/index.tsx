@@ -9,7 +9,7 @@ import Home from "../components/organisms/Home"
 const IndexPage = () => (
   <>
     <Head />
-    <Header login={false} />
+    <Header />
     <Main>
       <Home />
     </Main>

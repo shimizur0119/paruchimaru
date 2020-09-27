@@ -9,7 +9,7 @@ import Login from "../components/organisms/Login"
 const LoginPage = () => (
   <>
     <Head />
-    <Header login={false} />
+    <Header />
     <Main>
       <Login />
     </Main>

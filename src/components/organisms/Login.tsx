@@ -16,8 +16,9 @@ const Login = () => {
   }
   const onClickGoogle = () => {
     console.log("google")
-    firebase.login({ provider: "google", type: "popup" })
-    // navigate("/mypage")
+    firebase.login({ provider: "google", type: "popup" }).then(() => {
+      navigate("/mypage")
+    })
   }
   const onSubmitEmail = e => {
     e.preventDefault()

@@ -9,7 +9,7 @@ import Mypage from "../components/organisms/Mypage"
 const MypagePage = () => (
   <>
     <Head />
-    <Header login={false} />
+    <Header />
     <Main>
       <Mypage />
     </Main>

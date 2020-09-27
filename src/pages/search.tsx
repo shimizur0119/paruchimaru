@@ -9,7 +9,7 @@ import Search from "../components/organisms/Search"
 const SearchPage = () => (
   <>
     <Head />
-    <Header login={false} />
+    <Header />
     <Main>
       <Search />
     </Main>

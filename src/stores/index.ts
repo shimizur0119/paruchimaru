@@ -12,7 +12,9 @@ import loginReducer from "./login"
 
 const middlewares = [
   ...getDefaultMiddleware({
-    serializableCheck: false,
+    serializableCheck: {
+      ignoredActions: [actionTypes.LOGIN],
+    },
   }),
 ]
 
