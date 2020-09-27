@@ -1,14 +1,10 @@
 // font
-$f_1: "Roboto", sans-serif;
-$f_2: "Ranchers", cursive;
-$f_3: "Kosugi Maru", sans-serif;
-$base_font: "Ranchers", "Kosugi Maru", sans-serif;
+$f_1: "Noto Sans JP", sans-serif;
+$f_2: "Fredoka One", sans-serif;
+$base_font: "Noto Sans JP", "Fredoka One", sans-serif;
 
 // color
-$yellow: #ffe78f;
-$light-yellow: #f6f4e6;
-$black: #41444b;
-$gray: #eeeeee;
-
-$primary: $yellow;
-$secondary: $light-yellow;
+$black: #333;
+$yellow: #fddb3a;
+$gray: #c4c4c4;
+$liteyellow: #f6f4e6;

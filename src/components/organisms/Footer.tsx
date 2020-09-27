@@ -5,15 +5,12 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div className="footer__inner">
-          <p className="footer-txt2">
-            「こんなユルいWEBサービスがあってもいいんじゃないか」そんな思いから作成されたWEBサービスです。
-            セカイがヘーワになりますように by <span>PARUCHI</span>
-          </p>
-          <p className="footer-txt1">
-            このサイトは
-            <span>PARUCHI</span>
-            によって作成されました。
-          </p>
+          <div className="footer__author">
+            このサイトは<span>Paruchi</span>によって作成されたらしいです。
+          </div>
+          <div className="footer__tweet">
+            <div>そろそろネコ飼いたい...</div>
+          </div>
         </div>
       </footer>
     </>

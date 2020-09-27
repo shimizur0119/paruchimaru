@@ -1,43 +1,28 @@
 .header {
-  background-color: $primary;
+  background: $black;
   &__inner {
-    max-width: 1200px;
-    padding: 20px 0px;
+    height: 100px;
+    max-width: 1080px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &-title {
-    font-family: $f_2;
-    font-size: 40px;
-    letter-spacing: 0.1em;
+  &__logo {
+    width: 207px;
+  }
+  &__right {
     display: flex;
     align-items: center;
-    &::before {
-      content: "";
-      background-image: url("../images/barn.svg");
-      display: block;
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-    }
   }
-  &-nav {
-    ul {
-      display: flex;
-      li {
-        font-size: 20px;
-        font-family: $f_2;
-        letter-spacing: 0em;
-        &:not(:last-child) {
-          margin-right: 20px;
-        }
-        span {
-          margin-left: 10px;
-          font-size: 10px;
-        }
-      }
+  &__btn1 {
+    background: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 11px 20px;
+    border-radius: 100vh;
+    &:not(:last-child) {
+      margin-right: 20px;
     }
   }
 }

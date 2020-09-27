@@ -8,6 +8,73 @@ body {
 @import "./modules/header.scss";
 @import "./modules/main.scss";
 @import "./modules/home.scss";
-@import "./modules/top-hero.scss";
-@import "./modules/what-container.scss";
+@import "./modules/htu-contents.scss";
 @import "./modules/footer.scss";
+
+// .hello {
+//   background: white;
+//   padding: 30px;
+//   .svg {
+//     width: 200px;
+//     height: 200px;
+//     border: solid 1px black;
+//   }
+//   .btn1 {
+//     a {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       background: yellow;
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 40px;
+//       border: solid 2px black;
+//       &::before {
+//         content: "";
+//         display: block;
+//         background-image: url("../images/heart_1.svg");
+//         background-size: cover;
+//         width: 20px;
+//         height: 20px;
+//       }
+//       &:hover {
+//         &::before {
+//           background-image: url("../images/heart_2.svg");
+//         }
+//       }
+//     }
+//   }
+//   .btn2 {
+//     label {
+//       display: block;
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 40px;
+//       border: solid 2px gray;
+//       position: relative;
+//       transition: all 0.5s ease-in-out;
+//       &::before {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translateX(-50%) translateY(-50%);
+//         content: "";
+//         width: 20px;
+//         height: 20px;
+//         background-image: url("../images/heart_1.svg");
+//         background-size: cover;
+//         transition: all 0.5s ease-in-out;
+//       }
+//     }
+//     input {
+//       display: none;
+//     }
+//     input:checked + label {
+//       background: green;
+//       &::before {
+//         background-image: url("../images/heart_2.svg");
+//         transform: translateX(-50%) translateY(-50%) scale(3);
+//       }
+//     }
+//   }
+// }

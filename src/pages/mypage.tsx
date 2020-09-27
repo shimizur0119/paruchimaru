@@ -6,15 +6,16 @@ import Footer from "../components/organisms/Footer"
 import Main from "../components/organisms/main"
 import Home from "../components/organisms/Home"
 
-const IndexPage = () => (
+const MyPage = () => (
   <>
     <Head />
     <Header login={false} />
     <Main>
-      <Home />
+      {/* <Home /> */}
+      <div>my page...</div>
     </Main>
     <Footer />
   </>
 )
 
-export default IndexPage
+export default MyPage

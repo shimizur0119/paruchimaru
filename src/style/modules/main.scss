@@ -1,8 +1,7 @@
 .main {
-  background-color: $gray;
+  overflow: hidden;
   &__inner {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: auto;
-    padding: 50px 20px;
   }
 }

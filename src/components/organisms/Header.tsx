@@ -1,24 +1,24 @@
 import React from "react"
+import svg from "../../images/logo.svg"
 
-const Header = () => {
+const Header = ({ login }) => {
   return (
     <>
       <header className="header">
         <div className="header__inner">
-          <h1 className="header-title">PARUCHIMARU</h1>
-          <nav className="header-nav">
-            <ul>
-              <li>What's PARUCHIMARU ?</li>
-              <li>
-                Sign up
-                <span>to PARUCHIMARU</span>
-              </li>
-              <li>
-                Login
-                <span>to PARUCHIMARU</span>
-              </li>
-            </ul>
-          </nav>
+          <div className="header__left">
+            <img className="header__logo" src={svg} alt="logo" />
+          </div>
+          <div className="header__right">
+            {login ? (
+              <>
+                <div className="header__btn1">マイページ</div>
+                <div className="header__btn1">ログアウト</div>
+              </>
+            ) : (
+              <div className="header__btn1">ログイン</div>
+            )}
+          </div>
         </div>
       </header>
     </>

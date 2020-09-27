@@ -1,81 +1,144 @@
 .home {
-  h1 {
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-  &-content {
+  &__hero {
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: auto;
-    &__wrap {
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
-    }
-  }
-  %_input {
-    flex-basis: 100%;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: solid 5px $black;
-  }
-  %-label {
-    font-size: 20px;
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: $primary;
-  }
-  .input1 {
-    @extend %_input;
-    &-label {
-      @extend %-label;
-    }
-  }
-  .input2 {
-    @extend %_input;
-    &-label {
-      @extend %-label;
-    }
-  }
-  .display {
-    &-aria {
-      width: 100%;
-      margin: 0px 20px;
-      padding: 20px;
-      &__empty {
-        padding: 20px;
-        background-color: gray;
-      }
-    }
-    &-items {
-      padding: 20px;
-      background-color: $primary;
-      &__btn {
-        margin-top: 40px;
-        padding: 20px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: teal;
-        color: white;
-        font-size: 20px;
-        letter-spacing: 0.5em;
-      }
-    }
-    &-item {
-      font-size: 24px;
-      letter-spacing: 0.3em;
-      padding: 10px 0px;
+    &--left {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      &__btn {
-        padding: 10px;
-        background-color: $secondary;
+      img {
+        height: 220px;
+      }
+    }
+    &--right {
+    }
+  }
+  &__middle {
+  }
+  &__middle-item {
+    margin-bottom: 120px;
+    &--left {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &--question {
+      padding: 24px 17px;
+      background: $yellow;
+      font-size: 36px;
+      font-weight: 700;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: -18px;
+        bottom: -18px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $black;
+      }
+    }
+    &--answer {
+      max-width: 1000px;
+      padding: 30px;
+      background: $gray;
+      position: relative;
+      border-radius: 25px;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: -18px;
+        bottom: -18px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        border-radius: 25px;
+      }
+    }
+    &--answer-large {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 53px;
+      margin-bottom: 28px;
+    }
+    &--answer-small {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+    }
+  }
+  &__htu {
+  }
+  &__htu-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    &--container {
+      padding: 40px;
+      position: relative;
+      &::after {
+        transition: all 0.3s ease-out;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        display: block;
+        height: 13px;
+        width: 40%;
+        background: $gray;
+        border-radius: 100vh;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    &--en-text,
+    &--ja-text {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 70px;
+      text-align: center;
+    }
+    &--ja-text {
+      font-size: 36px;
+    }
+  }
+  &__htu-contents {
+  }
+  &__btm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+    &--login-btn,
+    &--search-btn {
+      width: 60%;
+      letter-spacing: 10px;
+      font-weight: 700;
+      text-align: center;
+      font-size: 36px;
+      background: $gray;
+      color: $black;
+      padding: 30px;
+      margin-bottom: 20px;
+      span {
+        background: linear-gradient(transparent 70%, $yellow 30%);
+      }
+      transition: all 0.3s ease-out;
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
       }
     }
   }

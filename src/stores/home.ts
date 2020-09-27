@@ -20,15 +20,24 @@ export const fetch1 = createAsyncThunk<any, string>(
     }
     const response = await axios(axiosConf)
     const data = await response.data
-    const needDatas = await data.items.map(e => {
+    const tmpDatas = await data.items.map(e => {
+      const imgUrl = e.volumeInfo.readingModes.image
+        ? e.volumeInfo.imageLinks.thumbnail
+        : null
       return {
-        title: e.volumeInfo.title,
-        image: e.imageLinks ? e.imageLinks.thumbnail : null,
-        publishedDate: e.publishedDate,
         id: e.id,
+        title: e.volumeInfo.title,
+        authors: e.volumeInfo.authors,
+        publishedDate: e.publishedDate,
+        image: imgUrl,
       }
     })
-
+    const title_list = tmpDatas.map(e => e.title)
+    const needDatas = {
+      word: word,
+      data: tmpDatas,
+      title_list: title_list,
+    }
     return [data, needDatas]
   }
 )

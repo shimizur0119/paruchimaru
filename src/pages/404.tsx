@@ -9,7 +9,7 @@ import Home from "../components/organisms/Home"
 const Page404 = () => (
   <>
     <Head />
-    <Header />
+    <Header login={false} />
     <Main>
       <div>404 Error...</div>
       <div>page not found...</div>
