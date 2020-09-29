@@ -3,6 +3,7 @@ module.exports = {
     title: `paruchimaru`,
     description: `PARUCHIMARU | パルチマル　このサイトはPARUCHIによって作成されたPARUCHIMARUのためのサイトです。`,
     author: `paruchi`,
+    siteUrl: "https://paruchimaru.web.app/"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +43,7 @@ module.exports = {
           measurementId: "G-XBY49G66PW"
         }
       }
-    }
+    },
+    "gatsby-plugin-sitemap"
   ],
 }

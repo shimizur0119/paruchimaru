@@ -14,6 +14,7 @@ import { createFirestoreInstance } from 'redux-firestore'
 const store = createStore()
 
 const rrfConfig = {
+  userProfile: 'users',
   useFirestoreForProfile: true
 }
 

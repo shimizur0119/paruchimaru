@@ -5,7 +5,6 @@ import { navigate } from "@reach/router"
 
 const Login = () => {
   const firebase = useFirebase()
-  const auth = useSelector((state: any) => state.firebase.auth)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const onChangeEmail = e => {
@@ -16,7 +15,11 @@ const Login = () => {
   }
   const onClickGoogle = () => {
     console.log("google")
-    firebase.login({ provider: "google", type: "popup" }).then(() => {
+    firebase.login({ provider: "google", type: "popup" }).then(e => {
+      const new_flag = e.additionalUserInfo.isNewUser
+      if (new_flag) {
+        firebase.updateProfile({ title_list: [] })
+      }
       navigate("/mypage")
     })
   }
@@ -26,15 +29,10 @@ const Login = () => {
     console.log(email)
     console.log(password)
   }
-  const logoutFunc = () => {
-    console.log("google")
-    firebase.logout()
-  }
+
   return (
     <>
       <div className="login">
-        <div onClick={logoutFunc}>logout</div>
-        {isLoaded(auth) && !isEmpty(auth) ? <div>true</div> : <div>false</div>}
         <div className="login__google">
           <button className="login__btn-google" onClick={onClickGoogle}>
             Googleでログイン
