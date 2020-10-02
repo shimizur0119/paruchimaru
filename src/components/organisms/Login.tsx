@@ -25,9 +25,31 @@ const Login = () => {
   }
   const onSubmitEmail = e => {
     e.preventDefault()
-    console.log("email")
-    console.log(email)
-    console.log(password)
+    firebase
+      .login({
+        email: email,
+        password: password,
+      })
+      .then(() => {
+        navigate("/mypage")
+      })
+      .catch(() => {
+        firebase
+          .createUser(
+            {
+              email: email,
+              password: password,
+            },
+            { email: email, displayName: "未設定", title_list: [] }
+          )
+          .then(() => {
+            navigate("/mypage")
+          })
+          .catch(err => {
+            console.log(err)
+            alert(err.message)
+          })
+      })
   }
 
   return (
@@ -45,8 +67,8 @@ const Login = () => {
               type="email"
               placeholder="メールアドレス"
               required
-              name="email"
               onChange={onChangeEmail}
+              value={email}
             />
           </div>
           <div className="login__email--input">
@@ -55,8 +77,8 @@ const Login = () => {
               type="password"
               placeholder="パスワード"
               required
-              name="password"
               onChange={onChangePassword}
+              value={password}
             />
           </div>
           <button className="login__btn-email" type="submit">

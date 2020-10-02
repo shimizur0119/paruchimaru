@@ -30,6 +30,7 @@ const Mypage = () => {
   useEffect(() => {
     console.log("useEffect")
     console.log(userData)
+    console.log(auth)
     if (userData) {
       setDisplayName(userData.displayName)
       setEmail(userData.email)
