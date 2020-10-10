@@ -49,15 +49,26 @@ const Search = () => {
             </div>
           </div>
           <div className="search__middle">
-            <div className="search__middle--text">
-              "タイトル"を含んだ検索結果
-            </div>
-            <div className="search__middle--text">Total: 3000件</div>
-            <div className="search__middle--text">最新リリース10件を表示</div>
+            {displayData && !errFlag ? (
+              <>
+                <div className="search__middle--text">
+                  "{input}"を含んだ検索結果
+                </div>
+                <div className="search__middle--text">
+                  Total: {fetchNeedDatas.totalItems}
+                </div>
+                <div className="search__middle--text">
+                  最新リリース10件を表示
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="search__nodata">no data...</div>
+              </>
+            )}
           </div>
           <ul className="search__display-box">
             {displayData &&
-              displayData &&
               !errFlag &&
               displayData.map(
                 ({ img, title, authors, releaseDate, description, co }, i) => (

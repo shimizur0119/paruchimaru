@@ -39,11 +39,37 @@ module.exports = {
           projectId: "develop-542b4",
           storageBucket: "develop-542b4.appspot.com",
           messagingSenderId: "103556982071",
-          appId: "1:103556982071:web:d591790e3aa5ba309026b2",
-          measurementId: "G-XBY49G66PW"
-        }
+          appId: "1:103556982071:web:839a31a6a2e8ba949026b2",
+          measurementId: "G-FP4JPN8X3L"
+        },
+        features: {
+          auth: true,
+          database: false,
+          firestore: true,
+          storage: false,
+          messaging: true,
+          functions: true,
+        },
       }
     },
-    "gatsby-plugin-sitemap"
+    "gatsby-plugin-sitemap",
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        appendScript: require.resolve(`./firebase-messaging-sw.js`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-firebase-messaging`,
+      options: {
+        config: {
+          apiKey: "AIzaSyAzdXlRZNwJ8ooAVUkyP3K3qFBz5AUMzHg",
+          projectId: "develop-542b4",
+          messagingSenderId: "103556982071",
+          appId: "1:103556982071:web:839a31a6a2e8ba949026b2",
+          measurementId: "G-FP4JPN8X3L"
+        },
+      },
+    },
   ],
 }

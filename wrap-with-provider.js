@@ -11,6 +11,7 @@ import 'firebase/firestore'
 
 import { createFirestoreInstance } from 'redux-firestore'
 
+
 const store = createStore()
 
 const rrfConfig = {
@@ -25,7 +26,9 @@ const rrfProps = {
   createFirestoreInstance
 }
 
-export default ({ element }) => {
+
+
+const WrapElement = ({ element }) => {
   return (
     <>
       <Provider store={store}>
@@ -37,3 +40,6 @@ export default ({ element }) => {
 
   )
 }
+
+
+export default WrapElement
